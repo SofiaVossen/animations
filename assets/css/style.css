@@ -1,0 +1,79 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+/* parent elements */
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+html{
+    scroll-behavior: smooth;
+}
+section{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+/* child elements */
+p{
+    text-align: center;
+}
+a{
+    text-decoration: none;
+    color:black;
+}
+/* backgrounds==================== */
+#red{
+    background-color: rgb(217, 131, 131);
+}
+#yellow{
+    background-color: blanchedalmond;
+}
+#green{
+    background-color: aquamarine;
+}
+/* arrow========================== */
+.arrow{
+    font-size: 50px;
+}
+/* animations Red and Yellow ====================*/
+#RedDownArrow, #YellowDownArrow{
+    animation-name: fadeArrow;
+    animation-duration:2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes fadeArrow{
+    from{
+        opacity: 0;
+        transform:translateY(0px) rotate(180deg);
+    }
+    to{
+        opacity: 1;
+        transform:translateY(50px) rotate(180deg);
+    }
+}
+/* animations Green=============================== */
+#GreenTopArrow{
+    animation-name: fadeArrowGreen;
+    animation-duration:2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes fadeArrowGreen{
+    from{
+        opacity: 0;
+        transform:translateY(0px);
+    }
+    to{
+        opacity: 1;
+        transform:translateY(50px);
+    }
+}
